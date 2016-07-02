@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<script type="text/javascript" src="rangeJS.js" ></script>
+<script type="text/javascript">
+
+window.onload=function(){
+	var box=document.getElementById("box");
+	var box1=document.getElementById("box1");
+	var a=new Range(box,100);
+	a.fn=function(){
+		console.log(this.value);
+	}
+	var b=new Range(box1,200);
+	b.fn=function(){
+		//console.log(this.value);
+		console.log(a.val())
+	}
+}
+
+
+</script>
+<style type="text/css">
+	#box{
+		width:155px;
+		height:3px;
+		background:indianred;
+		display:inline-block;
+		vertical-align: middle;
+		position: relative;
+	}
+	#box span{
+		display: inline-block;
+		position:absolute;
+		height:17px;
+		width:5px;
+		left:150px;
+		top:-7px;
+		background:indianred;
+		color:#fff;
+		box-shadow: 0 0 10px #000;
+	}
+	#box1{
+		width:255px;
+		height:10px;
+		background:indianred;
+		display:inline-block;
+		vertical-align: middle;
+		position: relative;
+	}
+	#box1 span{
+		display: inline-block;
+		position:absolute;
+		height:30px;
+		width:5px;
+		left:250px;
+		top:-7px;
+		background:indianred;
+		color:#fff;
+		box-shadow: 0 0 10px #000;
+	}
+</style>
+	</head>
+	<body>
+		<div id="box" >
+			<span></span>
+		</div>
+		<div id="box1" >
+			<span></span>
+		</div>
+	</body>
+</html>
